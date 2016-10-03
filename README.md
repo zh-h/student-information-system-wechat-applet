@@ -10,15 +10,15 @@
 
 4. 点击“查询”
 
+![教务系统 微信小程序](https://raw.githubusercontent.com/zh-h/student-information-system-wechat-applet/master/image/1.png)
+
+![教务系统 微信小程序](https://raw.githubusercontent.com/zh-h/student-information-system-wechat-applet/master/image/2.png)
+
+![教务系统 微信小程序](https://raw.githubusercontent.com/zh-h/student-information-system-wechat-applet/master/image/3.png)
+
 ## 局限
 
 ***由于 Javascript 跨域限制暂时无法直接通过小程序去抓取目标网站的 Cookie***
-
-***小程序暂时使用直接 GET 获取到的 HTML 内容进行解析然后填充视图作为演示***
-
-***如果能够避免跨域访问的限制，小程序可以不依赖服务端完成抓取的任务***
-
-
 xhr
 ```
 Date: Fri, 30 Sep 2016 12:46:33 GMT
@@ -45,5 +45,30 @@ Set-Cookie: ASP.NET_SessionId=hw4tpo55f4005ojii14d2e3r; path=/
 Cache-Control: private
 Content-Type: image/Gif; charset=gb2312
 Content-Length: 2245
+```
 
+***小程序暂时使用直接 GET 获取到的 HTML 内容进行解析然后填充视图作为演示***
+
+```
+var achievementUrl = isDebug ? mockUrl + 'achievements.html' : sisUrl + '/xscj.aspx?xh='
+```
+
+***如果能够避免跨域访问的限制，小程序可以不依赖服务端完成抓取的任务***
+
+```
+// XMLHttpRequest 完备
+var test = function (url, callback) {
+  var xhr = new XMLHttpRequest()
+  xhr.responseType = 'blob'
+  xhr.onload = function () {
+    var reader = new FileReader()
+    var headers = xhr.getAllResponseHeaders()
+    reader.onloadend = function () {
+      callback(reader.result, headers)
+    }
+    reader.readAsDataURL(xhr.response)
+  }
+  xhr.open('GET', url)
+  xhr.send()
+}
 ```
