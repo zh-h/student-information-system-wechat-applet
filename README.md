@@ -4,7 +4,7 @@
 
 正方教务系统的（微信）小程序，成绩数据爬虫
 
-- 请见下方局限
+**请见下方局限**
 
 **此项目使用 Applet 名称仅为借古讽今只之用**
 
@@ -22,11 +22,10 @@
 
 ![教务系统 微信小程序](https://raw.githubusercontent.com/zh-h/student-information-system-wechat-applet/master/image/2.png)
 
-![教务系统 微信小程序](https://raw.githubusercontent.com/zh-h/student-information-system-wechat-applet/master/image/3.png)
 
 ## 局限
 
-***由于 Javascript 跨域限制暂时无法直接通过小程序去抓取目标网站的 Cookie***
+**由于 Javascript 跨域限制暂时无法直接通过小程序去抓取目标网站的 Cookie**
 
 xhr
 ```
@@ -56,13 +55,13 @@ Content-Type: image/Gif; charset=gb2312
 Content-Length: 2245
 ```
 
-***小程序暂时使用直接 GET 获取到的 HTML 内容进行解析然后填充视图作为演示***
+**小程序暂时使用直接 GET 获取到的 HTML 内容进行解析然后填充视图作为演示**
 
 ```
 var achievementUrl = isDebug ? mockUrl + 'achievements.html' : sisUrl + '/xscj.aspx?xh='
 ```
 
-***如果能够避免跨域访问的限制，小程序可以不依赖服务端完成抓取的任务***
+**如果能够避免跨域访问的限制，小程序可以不依赖服务端完成抓取的任务**
 
 ```
 // XMLHttpRequest 完备
