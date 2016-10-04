@@ -11,5 +11,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "教务系统小程序",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "debug":true
 }

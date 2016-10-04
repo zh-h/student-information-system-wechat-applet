@@ -88,9 +88,6 @@ Page({
   },
 
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '成绩'
-    })
     wx.hideNavigationBarLoading()
     this.fillData(options)
     this.setCurrentTermDisplay()
