@@ -1,13 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/achievement/achievement",
-    "pages/introduce/introduce"
+    "pages/introduce/introduce",
+    "pages/elective/elective",
+    "pages/panel/panel"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "教务系统小程序",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }
