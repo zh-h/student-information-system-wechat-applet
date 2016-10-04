@@ -31,7 +31,7 @@ Page({
     })
   },
 
-  setCurrentTermDisplay: function () {
+  setCurrentTermShow: function () {
     var today = new Date(); // 获得当前日期
     var year = today.getFullYear(); // 获得年份
     var month = today.getMonth() + 1; // 此方法获得的月份是从0---11，所以要加1才是当前月份
@@ -88,8 +88,20 @@ Page({
   },
 
   onLoad: function (options) {
-    wx.hideNavigationBarLoading()
     this.fillData(options)
-    this.setCurrentTermDisplay()
+    this.setCurrentTermShow()
+  },
+
+  onShow:function(){
+    wx.hideNavigationBarLoading()
+  },
+
+  // https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/page.html?t=1475052056377#生命周期函数
+  onReady: function () {
+    var page = this
+    wx.setNavigationBarTitle({
+      title: '学号 ' + page.data.username + ' 的成绩'
+    }
+    )
   }
 })
