@@ -9,7 +9,6 @@ var cookieStr = ''
 
 login = function (username, password) {
   // TODO
-  return module
 }
 
 getAchievement = function (successFunc, failFunc) {

@@ -2,9 +2,11 @@
 
 ## 说明
 
-正方教务系统的（微信）小程序，成绩数据爬虫
+正方教务系统的（微信）小程序，~~成绩数据爬虫~~
 
-**请见下方局限**
+**准备用服务端做数据抓取，客户端仅作数据显示**
+
+~~请见下方局限~~
 
 **此项目使用 Applet 名称仅为借古讽今只之用**
 
@@ -23,7 +25,7 @@
 ![教务系统 微信小程序](https://raw.githubusercontent.com/zh-h/student-information-system-wechat-applet/master/image/2.png)
 
 
-## 局限
+## ~~局限~~ ##
 
 **由于 Javascript 跨域限制暂时无法直接通过小程序去抓取目标网站的 Cookie**
 
